@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Madrid & Lisboa</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="app-header">
+    <h1 id="tripTitle">Madrid & Lisboa</h1>
+    <p id="tripDates"></p>
+  </header>
+
+  <!-- HERO -->
+  <section class="trip-claim">
+    <span class="claim-icon">👩‍🦰🏃‍♀️</span>
+    <span class="claim-text">MM Inolvidable</span>
+  </section>
+
+  <!-- TABS -->
+  <nav class="tabs">
+    <button class="tab active" data-tab="overview">Resumen</button>
+    <button class="tab" data-tab="tickets">Tiquetes</button>
+    <button class="tab" data-tab="hotels">Hospedajes</button>
+    <button class="tab" data-tab="contacts">Contactos</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section id="tab-overview" class="tabpane active">
+      <div class="card">
+        <h2>Participantes</h2>
+        <ul id="participants"></ul>
+      </div>
+    </section>
+
+    <!-- TICKETS -->
+    <section id="tab-tickets" class="tabpane">
+      <div id="tickets" class="grid"></div>
+    </section>
+
+    <!-- HOTELS -->
+    <section id="tab-hotels" class="tabpane">
+      <div id="hotels" class="grid"></div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="tab-contacts" class="tabpane">
+      <div id="contacts" class="grid"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
