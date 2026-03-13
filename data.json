@@ -1,20 +1,68 @@
 {
-  "name": "MM Inolvidable",
-  "short_name": "MM Viaje",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#0b1220",
-  "theme_color": "#0b1220",
-  "icons": [
+  "trip": {
+    "title": "Madrid & Lisboa • 8 días",
+    "startDate": "Marzo 20",
+    "endDate": "Marzo 27",
+    "groupNote": "MM Inolvidable",
+    "participants": ["Susi", "Sarita"]
+  },
+
+  "tickets": [
     {
-      "src": "icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "label": "Vuelo Bogotá - Madrid",
+      "type": "Vuelo IB156",
+      "from": "Bogotá",
+      "to": "Madrid",
+      "dateTime": "2026-03-20 14:10",
+      "airline": "Iberia",
+      "pnr": "72GSPP",
+      "file": "assets/tiquetes_idayregreso.jpeg",
+      "location": "Aeropuerto El Dorado",
+      "notes": "Llegar 3 horas antes"
+    }
+  ],
+
+  "hotels": [
+    {
+      "city": "Madrid",
+      "name": "Casa Mate",
+      "address": "Calle del Príncipe de Vergara, 86",
+      "mapsQuery": "Calle del Príncipe de Vergara, 86, Madrid"
     },
     {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "city": "Lisboa",
+      "name": "Casa do Mercado",
+      "address": "Rua da Boavista 8 10, Lisboa",
+      "mapsQuery": "Rua da Boavista 8 10, Lisboa",
+      "website": "https://casadomercado.com/pt/"
     }
+  ],
+
+  "days": [
+    {
+      "day": 1,
+      "date": "20 Marzo",
+      "city": "Viaje",
+      "title": "Medellín → Bogotá → Madrid",
+      "items": [
+        { "time": "Mañana", "title": "Vuelo Medellín - Bogotá" },
+        { "time": "Tarde", "title": "Vuelo Bogotá - Madrid" }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "21 Marzo",
+      "city": "Madrid",
+      "title": "Madrid",
+      "items": [
+        { "time": "Todo el día", "title": "Explorar Madrid" }
+      ]
+    }
+  ],
+
+  "checklist": [
+    { "title": "Pasaporte" },
+    { "title": "Seguro de viaje" },
+    { "title": "Tarjetas / efectivo" }
   ]
 }

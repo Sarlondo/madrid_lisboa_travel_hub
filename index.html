@@ -8,51 +8,46 @@
 </head>
 
 <body>
-  <header class="header">
-    <h1 id="tripTitle"></h1>
-    <p id="tripDates"></p>
-  </header>
 
-  <nav class="tabs">
-    <button class="tab active" data-tab="resumen">Resumen</button>
-    <button class="tab" data-tab="itinerario">Itinerario</button>
-    <button class="tab" data-tab="tickets">Tiquetes</button>
-    <button class="tab" data-tab="hotels">Hoteles</button>
-    <button class="tab" data-tab="contacts">Contactos</button>
-    <button class="tab" data-tab="checklist">Checklist</button>
-  </nav>
+<header class="header">
+  <h1 id="tripTitle"></h1>
+  <p id="tripDates"></p>
+</header>
 
-  <main class="container">
+<nav class="tabs">
+  <button class="tab active" data-tab="resumen">Resumen</button>
+  <button class="tab" data-tab="itinerario">Itinerario</button>
+  <button class="tab" data-tab="tickets">Tiquetes</button>
+  <button class="tab" data-tab="hotels">Hoteles</button>
+  <button class="tab" data-tab="checklist">Checklist</button>
+</nav>
 
-    <section id="tab-resumen" class="tabpane active">
-      <div class="card hero-claim">
-        <span class="hero-icon">👩‍🦰👩‍🦰✈️</span>
-        <h2 id="groupNote"></h2>
-      </div>
-    </section>
+<main class="container">
 
-    <section id="tab-itinerario" class="tabpane">
-      <div id="days"></div>
-    </section>
+  <section id="tab-resumen" class="tabpane active">
+    <div class="card">
+      <h2 id="groupNote"></h2>
+    </div>
+  </section>
 
-    <section id="tab-tickets" class="tabpane">
-      <div id="tickets" class="grid"></div>
-    </section>
+  <section id="tab-itinerario" class="tabpane">
+    <div id="days"></div>
+  </section>
 
-    <section id="tab-hotels" class="tabpane">
-      <div id="hotels" class="grid"></div>
-    </section>
+  <section id="tab-tickets" class="tabpane">
+    <div id="tickets" class="grid"></div>
+  </section>
 
-    <section id="tab-contacts" class="tabpane">
-      <div id="contacts" class="grid"></div>
-    </section>
+  <section id="tab-hotels" class="tabpane">
+    <div id="hotels" class="grid"></div>
+  </section>
 
-    <section id="tab-checklist" class="tabpane">
-      <ul id="checklist"></ul>
-    </section>
+  <section id="tab-checklist" class="tabpane">
+    <ul id="checklist"></ul>
+  </section>
 
-  </main>
+</main>
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

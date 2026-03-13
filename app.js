@@ -1,6 +1,4 @@
-// ============================
 // Tabs
-// ============================
 const tabs = document.querySelectorAll('.tab');
 const panes = document.querySelectorAll('.tabpane');
 
@@ -13,17 +11,10 @@ tabs.forEach(tab => {
   };
 });
 
-// ============================
-// Helpers
-// ============================
-function mapsSearchUrl(query) {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query || "")}`;
+function safe(v) {
+  return (v ?? '').toString();
 }
-function safe(v) { return (v ?? "").toString(); }
 
-// ============================
-// Load data.json
-// ============================
 fetch('data.json', { cache: 'no-store' })
   .then(r => r.json())
   .then(d => {
@@ -38,9 +29,10 @@ fetch('data.json', { cache: 'no-store' })
     (d.tickets || []).forEach(t => {
       ticketsEl.innerHTML += `
         <div class="card">
-          <h3>${t.label}</h3>
-          <p>${t.from} → ${t.to}</p>
-        </div>`;
+          <h3>${safe(t.label)}</h3>
+          <p>${safe(t.from)} → ${safe(t.to)}</p>
+        </div>
+      `;
     });
 
     // Hotels
@@ -48,32 +40,36 @@ fetch('data.json', { cache: 'no-store' })
     (d.hotels || []).forEach(h => {
       hotelsEl.innerHTML += `
         <div class="card">
-          <h3>${h.name}</h3>
-          <p>${h.city}</p>
-        </div>`;
+          <h3>${safe(h.name)}</h3>
+          <p>${safe(h.city)}</p>
+        </div>
+      `;
     });
 
-    // Itinerary ✅
+    // Itinerary
     const daysEl = document.getElementById('days');
     const days = d.days || [];
 
     days.forEach(day => {
       daysEl.innerHTML += `
-        <div class="day-card">
-          <h3>${day.date} · ${day.city}</h3>
-          <p><strong>${day.title}</strong></p>
-          ${day.items.map(i => `<p>• ${i.time} – ${i.title}</p>`).join('')}
-        </div>`;
+        <div class="card">
+          <h3>${safe(day.date)} · ${safe(day.city)}</h3>
+          <p><strong>${safe(day.title)}</strong></p>
+          ${(day.items || []).map(i =>
+            `<p>• ${safe(i.time)} – ${safe(i.title)}</p>`
+          ).join('')}
+        </div>
+      `;
     });
 
     // Checklist
     const checklistEl = document.getElementById('checklist');
     (d.checklist || []).forEach(i => {
-      checklistEl.innerHTML += `<li>✅ ${i.title}</li>`;
+      checklistEl.innerHTML += `<li>✅ ${safe(i.title)}</li>`;
     });
 
   })
   .catch(err => {
     console.error(err);
-    alert("Error cargando data.json");
+    alert('Error cargando data.json');
   });
