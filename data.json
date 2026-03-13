@@ -3,21 +3,18 @@
     "title": "Madrid & Lisboa • 8 días",
     "startDate": "Marzo 20",
     "endDate": "Marzo 27",
-    "datesLabel": "Completa fechas en data.json",
-    "participants": ["Susi", "Sarita"],
     "groupNote": "MM Inolvidable",
-    "emergency": {
-      "country": "España/Portugal",
-      "number": "",
-      "notes": ""
-    }
+    "participants": ["Susi", "Sarita"],
+    "notes": "Viaje flexible, pensado para disfrutar, caminar y descubrir sin prisas."
   },
+
   "assets": [
     {
       "label": "Carpeta de archivos (Drive/OneDrive)",
       "url": ""
     }
   ],
+
   "tickets": [
     {
       "label": "Vuelo Bogotá - Madrid",
@@ -34,108 +31,99 @@
       "notes": "Llegar 3 horas antes"
     }
   ],
+
   "hotels": [
     {
       "city": "Madrid",
-      "name": "",
+      "name": "Casa Mate",
       "address": "",
       "phone": "",
       "checkIn": "",
       "checkOut": "",
-      "mapsQuery": "",
+      "mapsQuery": "Madrid",
       "website": "",
-      "notes": ""
+      "notes": "Hospedaje en casa"
+    },
+    {
+      "city": "Madrid",
+      "name": "Casa Juli",
+      "address": "",
+      "phone": "",
+      "checkIn": "",
+      "checkOut": "",
+      "mapsQuery": "Madrid",
+      "website": "",
+      "notes": "Hospedaje en casa"
     },
     {
       "city": "Lisboa",
       "name": "Casa do Mercado",
-      "address": "Rua da Boavista 8 10, 1200-275",
+      "address": "Rua da Boavista 8 10, 1200-275 Lisboa",
       "phone": "+351912964123",
       "checkIn": "15:00",
       "checkOut": "11:00",
       "mapsQuery": "Rua da Boavista 8 10, 1200-275 Lisboa",
       "website": "https://casadomercado.com/pt/",
-      "files": ["assets/nocheunolisboa.jpeg", "assets/nochedoslisboa.jpeg"],
+      "files": [
+        "assets/nocheunolisboa.jpeg",
+        "assets/nochedoslisboa.jpeg"
+      ],
       "notes": ""
     }
   ],
+
   "contacts": [
     {
-      "name": "",
-      "role": "",
-      "phone": "",
-      "whatsapp": "",
+      "name": "Susi",
+      "role": "Viaje",
+      "phone": "+573001112233",
+      "whatsapp": "+573001112233",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "name": "Saris",
+      "role": "Viaje",
+      "phone": "+573002223344",
+      "whatsapp": "+573002223344",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "name": "Mate",
+      "role": "Viaje",
+      "phone": "+573003334455",
+      "whatsapp": "+573003334455",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "name": "Juli",
+      "role": "Viaje",
+      "phone": "+573004445566",
+      "whatsapp": "+573004445566",
       "email": "",
       "notes": ""
     }
   ],
-  "places": [
-    {
-      "id": "",
-      "city": "Madrid",
-      "name": "",
-      "category": "",
-      "address": "",
-      "mapsQuery": "",
-      "phone": "",
-      "website": "",
-      "hours": "",
-      "notes": ""
-    },
-    {
-      "id": "",
-      "city": "Lisboa",
-      "name": "",
-      "category": "",
-      "address": "",
-      "mapsQuery": "",
-      "phone": "",
-      "website": "",
-      "hours": "",
-      "notes": ""
-    }
-  ],
+
+  "places": [],
+
   "days": [
     {
       "day": 1,
       "date": "",
       "city": "Madrid",
       "title": "",
-      "items": [
-        {
-          "time": "",
-          "title": "",
-          "details": "",
-          "location": "",
-          "mapsQuery": "",
-          "phone": "",
-          "tag": "",
-          "highlight": false,
-          "links": []
-        }
-      ]
+      "items": []
     }
   ],
+
   "checklist": [
-    {
-      "title": "Pasaporte / documento",
-      "details": ""
-    },
-    {
-      "title": "Seguro de viaje",
-      "details": ""
-    },
-    {
-      "title": "Tarjetas / efectivo",
-      "details": ""
-    },
-    {
-      "title": "Adaptador / cargadores",
-      "details": ""
-    },
-    {
-      "title": "Reservas descargadas (PDF)",
-      "details": ""
-    }
+    { "title": "Pasaporte / documento", "details": "" },
+    { "title": "Seguro de viaje", "details": "" },
+    { "title": "Tarjetas / efectivo", "details": "" },
+    { "title": "Adaptador / cargadores", "details": "" },
+    { "title": "Reservas descargadas (PDF)", "details": "" }
   ]
 }

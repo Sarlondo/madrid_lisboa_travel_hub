@@ -1,60 +1,73 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1220" />
-  <title>Madrid & Lisboa</title>
-
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/icon-192.png" />
-  <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <title>Madrid & Lisboa • 8 días</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header class="app-header">
-    <h1 id="tripTitle">Madrid & Lisboa</h1>
+  <header class="header">
+    <h1 id="tripTitle"></h1>
     <p id="tripDates"></p>
   </header>
 
-  <!-- HERO -->
-  <section class="trip-claim">
-    <span class="claim-icon">👩‍🦰🏃‍♀️</span>
-    <span class="claim-text">MM Inolvidable</span>
-  </section>
-
-  <!-- TABS -->
   <nav class="tabs">
-    <button class="tab active" data-tab="overview">Resumen</button>
+    <button class="tab active" data-tab="resumen">Resumen</button>
+    <button class="tab" data-tab="itinerario">Itinerario</button>
     <button class="tab" data-tab="tickets">Tiquetes</button>
-    <button class="tab" data-tab="hotels">Hospedajes</button>
+    <button class="tab" data-tab="hotels">Hoteles</button>
     <button class="tab" data-tab="contacts">Contactos</button>
+    <button class="tab" data-tab="places">Lugares</button>
+    <button class="tab" data-tab="checklist">Checklist</button>
   </nav>
 
   <main class="container">
 
-    <!-- OVERVIEW -->
-    <section id="tab-overview" class="tabpane active">
-      <div class="card">
-        <h2>Participantes</h2>
-        <ul id="participants"></ul>
-      </div>
-    </section>
+    <section id="tab-resumen" class="tabpane active">
+  <div class="card hero-claim">
+    <span class="hero-icon">👩‍🦰🏃‍♀️</span>
+    <h2 id="groupNote"></h2>
+    <p class="hero-sub">Un viaje para disfrutar sin prisas ✨</p>
+  </div>
 
-    <!-- TICKETS -->
+  <div class="card">
+    <p><strong>📅 Fechas:</strong> <span id="summaryDates"></span></p>
+    <p><strong>👭 Participantes:</strong> <span id="participants"></span></p>
+    <p><strong>✈️ Ruta:</strong> Bogotá → Madrid → Lisboa → Madrid</p>
+    <p><strong>🏨 Hospedajes:</strong> Madrid (Casa Mate & Casa Juli), Lisboa (Casa do Mercado)</p>
+    <p><strong>🧭 Nota:</strong> Viaje flexible, pensado para disfrutar, caminar y descubrir.</p>
+  </div>
+</section>
+
     <section id="tab-tickets" class="tabpane">
       <div id="tickets" class="grid"></div>
     </section>
 
-    <!-- HOTELS -->
     <section id="tab-hotels" class="tabpane">
       <div id="hotels" class="grid"></div>
     </section>
 
-    <!-- CONTACTS -->
     <section id="tab-contacts" class="tabpane">
       <div id="contacts" class="grid"></div>
+    </section>
+
+    <section id="tab-places" class="tabpane">
+  <div class="card">
+    <p>Agrega lugares por conocer. Puedes borrarlos o marcarlos como visitados ✅</p>
+    <input id="placeName" placeholder="Lugar">
+    <input id="placeCity" placeholder="Ciudad">
+    <input id="placeAddress" placeholder="Dirección">
+    <button onclick="addPlace()">➕ Agregar</button>
+  </div>
+
+  <div id="places" class="grid"></div>
+</section>
+
+    <section id="tab-checklist" class="tabpane">
+      <ul id="checklist"></ul>
     </section>
 
   </main>
