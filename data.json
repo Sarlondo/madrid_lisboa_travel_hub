@@ -5,8 +5,7 @@
     "endDate": "Marzo 27",
     "groupNote": "MM Inolvidable",
     "participants": ["Susi", "Sarita"],
-    "notes": "Viaje flexible, pensado para disfrutar, caminar y descubrir sin prisas."
-  },
+    "notes": "Viaje relámpago para disfrutar entre amigas",
 
   "assets": [
     {
@@ -36,24 +35,16 @@
     {
       "city": "Madrid",
       "name": "Casa Mate",
-      "address": "",
-      "phone": "",
-      "checkIn": "",
-      "checkOut": "",
-      "mapsQuery": "Madrid",
-      "website": "",
-      "notes": "Hospedaje en casa"
+      "address": "Calle del Príncipe de Vergara, 86",
+      "mapsQuery": "Calle del Príncipe de Vergara, 86, madrid",
+      "notes": "Hospedaje donde amig@s"
     },
     {
       "city": "Madrid",
       "name": "Casa Juli",
-      "address": "",
-      "phone": "",
-      "checkIn": "",
-      "checkOut": "",
-      "mapsQuery": "Madrid",
-      "website": "",
-      "notes": "Hospedaje en casa"
+      "address": "Calle de Herreros de Tejada, 8",
+      "mapsQuery": "Calle de Herreros de Tejada, 8, madrid",
+      "notes": "Hospedaje donde amig@s"
     },
     {
       "city": "Lisboa",
@@ -123,15 +114,86 @@
 
   "places": [],
 
-  "days": [
-    {
-      "day": 1,
-      "date": "",
-      "city": "Madrid",
-      "title": "",
-      "items": []
-    }
-  ],
+"days": [
+  {
+    "day": 1,
+    "date": "20 Marzo",
+    "city": "Viaje",
+    "title": "Medellín → Bogotá → Madrid",
+    "items": [
+      { "time": "Mañana", "title": "Vuelo Medellín - Bogotá" },
+      { "time": "Tarde", "title": "Vuelo Bogotá - Madrid" },
+      { "time": "Noche", "title": "Llegada a Madrid y descanso" }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "21 Marzo",
+    "city": "Madrid",
+    "title": "Madrid",
+    "items": [
+      { "time": "Todo el día", "title": "Explorar Madrid con calma" }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "22 Marzo",
+    "city": "Madrid",
+    "title": "Madrid",
+    "items": [
+      { "time": "Todo el día", "title": "Madrid: caminatas, comida y barrios" }
+    ]
+  },
+  {
+    "day": 4,
+    "date": "23 Marzo",
+    "city": "Lisboa",
+    "title": "Madrid → Lisboa",
+    "items": [
+      { "time": "Mañana", "title": "Traslado Madrid - Lisboa" },
+      { "time": "Tarde", "title": "Primer paseo por Lisboa" }
+    ]
+  },
+  {
+    "day": 5,
+    "date": "24 Marzo",
+    "city": "Lisboa",
+    "title": "Lisboa",
+    "items": [
+      { "time": "Todo el día", "title": "Lisboa histórico: barrios y miradores" }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "25 Marzo",
+    "city": "Cascais",
+    "title": "Cascais",
+    "items": [
+      { "time": "Mañana", "title": "Tren Lisboa - Cascais" },
+      { "time": "Tarde", "title": "Playa, paseo y comida frente al mar" }
+    ]
+  },
+  {
+    "day": 7,
+    "date": "26 Marzo",
+    "city": "Lisboa",
+    "title": "Lisboa",
+    "items": [
+      { "time": "Todo el día", "title": "Lisboa libre / pendientes" }
+    ]
+  },
+  {
+    "day": 8,
+    "date": "27 Marzo",
+    "city": "Viaje",
+    "title": "Lisboa → Madrid → Bogotá → Medellín",
+    "items": [
+      { "time": "Mañana", "title": "Vuelo Lisboa - Madrid" },
+      { "time": "Tarde", "title": "Vuelo Madrid - Bogotá" },
+      { "time": "Noche", "title": "Bogotá - Medellín" }
+    ]
+  }
+],
 
   "checklist": [
     { "title": "Pasaporte / documento", "details": "" },
@@ -140,4 +202,5 @@
     { "title": "Adaptador / cargadores", "details": "" },
     { "title": "Reservas descargadas (PDF)", "details": "" }
   ]
+  }
 }

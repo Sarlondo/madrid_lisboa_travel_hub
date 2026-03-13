@@ -114,3 +114,54 @@ body {
   color: #fff;
   outline: none;
 }
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.day-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-date {
+  font-weight: 700;
+  opacity: .9;
+}
+
+.day-city {
+  font-size: .9rem;
+  opacity: .7;
+}
+
+.day-title {
+  margin: 6px 0 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.timeline-item {
+  padding-left: 14px;
+  border-left: 2px solid #4f8cff;
+  margin-bottom: 10px;
+}
+
+.timeline-item span {
+  display: block;
+  font-size: .8rem;
+  opacity: .7;
+}
+
+@media (max-width: 600px) {
+  .day-title {
+    font-size: 1rem;
+  }
+}

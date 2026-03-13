@@ -9,7 +9,9 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove('active'));
     panes.forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
-    document.getElementById(`tab-${tab.dataset.tab}`).classList.add('active');
+    document
+      .getElementById(`tab-${tab.dataset.tab}`)
+      .classList.add('active');
   };
 });
 
@@ -19,7 +21,9 @@ tabs.forEach(tab => {
 function mapsSearchUrl(query) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query || "")}`;
 }
-function safe(v) { return (v ?? "").toString(); }
+function safe(v) {
+  return (v ?? "").toString();
+}
 
 // ============================
 // Cargar data.json
@@ -28,27 +32,36 @@ fetch('data.json', { cache: 'no-store' })
   .then(r => r.json())
   .then(d => {
 
-    // Header / Resumen (si tienes estos IDs en tu HTML actual)
+    // ============================
+    // HEADER / RESUMEN
+    // ============================
     const titleEl = document.getElementById('tripTitle');
     const datesEl = document.getElementById('tripDates');
     if (titleEl) titleEl.textContent = d.trip?.title || '';
-    if (datesEl) datesEl.textContent = `${d.trip?.startDate || ''} → ${d.trip?.endDate || ''}`;
+    if (datesEl) {
+      datesEl.textContent = `${d.trip?.startDate || ''} → ${d.trip?.endDate || ''}`;
+    }
 
     const groupNoteEl = document.getElementById('groupNote');
     if (groupNoteEl) groupNoteEl.textContent = d.trip?.groupNote || '';
 
     const participantsEl = document.getElementById('participants');
-    if (participantsEl) participantsEl.textContent = (d.trip?.participants || []).join(', ');
+    if (participantsEl) {
+      participantsEl.textContent = (d.trip?.participants || []).join(', ');
+    }
 
     const summaryDatesEl = document.getElementById('summaryDates');
-    if (summaryDatesEl) summaryDatesEl.textContent = `${d.trip?.startDate || ''} → ${d.trip?.endDate || ''}`;
+    if (summaryDatesEl) {
+      summaryDatesEl.textContent = `${d.trip?.startDate || ''} → ${d.trip?.endDate || ''}`;
+    }
 
     // ============================
-    // TIQUETES (cards visuales)
+    // TIQUETES
     // ============================
     const ticketsEl = document.getElementById('tickets');
     if (ticketsEl) {
       ticketsEl.innerHTML = '';
+
       (d.tickets || []).forEach(t => {
         const fileBtn = t.file
           ? `<a class="btn-link" href="${safe(t.file)}" target="_blank" rel="noopener">📄 Abrir archivo</a>`
@@ -77,7 +90,6 @@ fetch('data.json', { cache: 'no-store' })
         `;
       });
 
-      // Si no hay tiquetes
       if (!(d.tickets || []).length) {
         ticketsEl.innerHTML = `
           <div class="card">
@@ -88,11 +100,12 @@ fetch('data.json', { cache: 'no-store' })
     }
 
     // ============================
-    // HOTELES (sin “Cómo llegar”, íconos coherentes)
+    // HOTELES
     // ============================
     const hotelsEl = document.getElementById('hotels');
     if (hotelsEl) {
       hotelsEl.innerHTML = '';
+
       (d.hotels || []).forEach(h => {
         const mapsBtn = h.mapsQuery
           ? `<a class="btn-link ghost" href="${mapsSearchUrl(h.mapsQuery)}" target="_blank" rel="noopener">📍 Ver en Maps</a>`
@@ -108,8 +121,8 @@ fetch('data.json', { cache: 'no-store' })
             <p class="muted"><strong>Ciudad:</strong> ${safe(h.city)}</p>
             ${h.address ? `<p class="muted">📍 ${safe(h.address)}</p>` : ''}
             ${h.phone ? `<p class="muted">📞 ${safe(h.phone)}</p>` : ''}
-            ${h.checkIn ? `<p>🛏️ Check-in: <strong>${safe(h.checkIn)}</strong></p>` : ''}
-            ${h.checkOut ? `<p>🕒 Check-out: <strong>${safe(h.checkOut)}</strong></p>` : ''}
+            ${h.checkIn ? `<p>🛏️ Check‑in: <strong>${safe(h.checkIn)}</strong></p>` : ''}
+            ${h.checkOut ? `<p>🕒 Check‑out: <strong>${safe(h.checkOut)}</strong></p>` : ''}
             <div class="actions">
               ${mapsBtn}
               ${webBtn}
@@ -128,21 +141,35 @@ fetch('data.json', { cache: 'no-store' })
     }
 
     // ============================
-    // ITINERARIO (placeholder si está vacío)
+    // ITINERARIO (TIMELINE VISUAL ✅)
     // ============================
     const daysEl = document.getElementById('days');
     if (daysEl) {
-      daysEl.innerHTML = '';
       const days = d.days || [];
+
       if (!days.length) {
-        daysEl.innerHTML = `<div class="card"><p class="muted">🗓️ Aún no hay itinerario.</p></div>`;
+        daysEl.innerHTML = `
+          <div class="card">
+            <p class="muted">🗓️ Aún no hay itinerario.</p>
+          </div>`;
       } else {
+        daysEl.innerHTML = `<div class="timeline"></div>`;
+        const timeline = daysEl.querySelector('.timeline');
+
         days.forEach(day => {
-          const items = (day.items || []).map(i => `<p>• ${safe(i.time)} ${safe(i.title)}</p>`).join('');
-          daysEl.innerHTML += `
-            <div class="card">
-              <h3>Día ${safe(day.day)} · ${safe(day.city)}</h3>
-              ${items || `<p class="muted">Sin actividades aún</p>`}
+          timeline.innerHTML += `
+            <div class="day-card">
+              <div class="day-header">
+                <div class="day-date">${safe(day.date)}</div>
+                <div class="day-city">${safe(day.city)}</div>
+              </div>
+              <div class="day-title">${safe(day.title)}</div>
+              ${(day.items || []).map(i => `
+                <div class="timeline-item">
+                  <span>${safe(i.time)}</span>
+                  ${safe(i.title)}
+                </div>
+              `).join('')}
             </div>
           `;
         });
@@ -150,11 +177,12 @@ fetch('data.json', { cache: 'no-store' })
     }
 
     // ============================
-    // CONTACTOS (si tu HTML tiene #contacts)
+    // CONTACTOS
     // ============================
     const contactsEl = document.getElementById('contacts');
     if (contactsEl) {
       contactsEl.innerHTML = '';
+
       (d.contacts || []).forEach(c => {
         const callBtn = c.phone
           ? `<a class="btn-link" href="tel:${safe(c.phone)}">📞 Llamar</a>`
@@ -171,7 +199,7 @@ fetch('data.json', { cache: 'no-store' })
     }
 
     // ============================
-    // CHECKLIST (si tu HTML tiene #checklist)
+    // CHECKLIST
     // ============================
     const checklistEl = document.getElementById('checklist');
     if (checklistEl) {
