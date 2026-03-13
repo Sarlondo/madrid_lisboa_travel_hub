@@ -69,6 +69,20 @@
         "assets/nochedoslisboa.jpeg"
       ],
       "notes": ""
+    },
+    {
+      "city": "Cascais",
+      "name": "Legacy Hotel Cascais by Hilton",
+      "address": "Av. 25 de Abril 528, 2750-511 Cascais, Portugal",
+      "phone": "+351912964123",
+      "checkIn": "15:00",
+      "checkOut": "12:00",
+      "mapsQuery": "Av. 25 de Abril 528, 2750-511 Cascais, Portugal",
+      "website": "https://www.hilton.com/es/hotels/lctlhqq-legacy-hotel-cascais/",
+      "files": [
+        "assets/hotelcascais.jpeg"
+      ],
+      "notes": "Reserva 3424118615"
     }
   ],
 
@@ -76,16 +90,16 @@
     {
       "name": "Susi",
       "role": "Viaje",
-      "phone": "+573001112233",
-      "whatsapp": "+573001112233",
+      "phone": "+573052344866",
+      "whatsapp": "+573052344866",
       "email": "",
       "notes": ""
     },
     {
       "name": "Saris",
       "role": "Viaje",
-      "phone": "+573002223344",
-      "whatsapp": "+573002223344",
+      "phone": "+573128345083",
+      "whatsapp": "+573128345083",
       "email": "",
       "notes": ""
     },
@@ -100,8 +114,8 @@
     {
       "name": "Juli",
       "role": "Viaje",
-      "phone": "+573004445566",
-      "whatsapp": "+573004445566",
+      "phone": "+34686142973",
+      "whatsapp": "+34686142973",
       "email": "",
       "notes": ""
     }
