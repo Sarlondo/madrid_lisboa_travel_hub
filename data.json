@@ -3,8 +3,9 @@
     "title": "Madrid & Lisboa • 8 días",
     "startDate": "Marzo 20",
     "endDate": "Marzo 27",
-    "groupNote": "MM Inolvidable",
-    "participants": ["Susi", "Sarita"]
+    "groupNote": "MM en el Viejo Continente",
+    "participants": ["Susi", "Sarita"],
+    "notes": "Corto Pero Productivo"
   },
 
   "tickets": [
@@ -15,9 +16,45 @@
       "to": "Madrid",
       "dateTime": "2026-03-20 14:10",
       "airline": "Iberia",
-      "pnr": "72GSPP",
+      "pnr": "72GSPPP",
       "file": "assets/tiquetes_idayregreso.jpeg",
       "location": "Aeropuerto El Dorado",
+      "notes": "Llegar 3 horas antes"
+    },
+     {
+      "label": "Vuelo Madrid - Lisboa",
+      "type": "Vuelo TP1011",
+      "from": "Madrid",
+      "to": "Lisboa",
+      "dateTime": "2026-03-23 10:20",
+      "airline": "TAP Air Portugal",
+      "pnr": "ZVWBX3",
+      "file": "assets/tiquetemadridlisboamadrid.jpeg",
+      "location": "Aeropuerto Adolfo Suárez Madrid-Barajas",
+      "notes": "Llegada 10:45 hora local"
+    },
+     {
+      "label": "Vuelo Lisboa - Madrid",
+      "type": "Vuelo TP1012",
+      "from": "Lisboa",
+      "to": "Madrid",
+      "dateTime": "2026-03-27 09:00",
+      "airline": "TAP Air Portugal",
+      "pnr": "ZVWBX3",
+      "file": "assets/tiquetemadridlisboamadrid.jpeg",
+      "location": "Aeropuerto Lisboa Humberto Delgado",
+      "notes": "Llegada 11:20 hora local"
+    },
+     {
+      "label": "Vuelo Madrid - Bogotá",
+      "type": "Vuelo IB153",
+      "from": "Madrid",
+      "to": "Bogotá",
+      "dateTime": "2026-03-2716:10",
+      "airline": "Iberia",
+      "pnr": "72GSPPP",
+      "file": "assets/tiquetes_idayregreso.jpeg",
+      "location": "Aeropuerto Adolfo Suárez Madrid-Barajas",
       "notes": "Llegar 3 horas antes"
     }
   ],
@@ -27,14 +64,36 @@
       "city": "Madrid",
       "name": "Casa Mate",
       "address": "Calle del Príncipe de Vergara, 86",
-      "mapsQuery": "Calle del Príncipe de Vergara, 86, Madrid"
+      "mapsQuery": "Calle del Príncipe de Vergara, 86, Madrid",
+      "notes": "Hospedaje donde amig@s"
+    },
+    {
+      "city": "Madrid",
+      "name": "Casa Juli",
+      "address": "Calle de Herreros de Tejada, 8",
+      "mapsQuery": "Calle de Herreros de Tejada, 8, Madrid",
+      "notes": "Hospedaje donde amig@s"
     },
     {
       "city": "Lisboa",
       "name": "Casa do Mercado",
-      "address": "Rua da Boavista 8 10, Lisboa",
+      "address": "Rua da Boavista 8 10, 1200-275 Lisboa",
+      "phone": "+351912964123",
+      "checkIn": "15:00",
+      "checkOut": "11:00",
       "mapsQuery": "Rua da Boavista 8 10, Lisboa",
       "website": "https://casadomercado.com/pt/"
+    },
+    {
+      "city": "Cascais",
+      "name": "Legacy Hotel Cascais by Hilton",
+      "address": "Av. 25 de Abril 528, 2750-511 Cascais, Portugal",
+      "phone": "+351912964123",
+      "checkIn": "15:00",
+      "checkOut": "12:00",
+      "mapsQuery": "Av. 25 de Abril 528, Cascais, Portugal",
+      "website": "https://www.hilton.com/es/hotels/lctlhqq-legacy-hotel-cascais/",
+      "notes": "Reserva confirmada"
     }
   ],
 
@@ -46,7 +105,8 @@
       "title": "Medellín → Bogotá → Madrid",
       "items": [
         { "time": "Mañana", "title": "Vuelo Medellín - Bogotá" },
-        { "time": "Tarde", "title": "Vuelo Bogotá - Madrid" }
+        { "time": "Tarde", "title": "Vuelo Bogotá - Madrid" },
+        { "time": "Noche", "title": "Llegada a Madrid y descanso" }
       ]
     },
     {
@@ -55,14 +115,76 @@
       "city": "Madrid",
       "title": "Madrid",
       "items": [
-        { "time": "Todo el día", "title": "Explorar Madrid" }
+        { "time": "Todo el día", "title": "Explorar Madrid con calma" }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "22 Marzo",
+      "city": "Madrid",
+      "title": "Madrid",
+      "items": [
+        { "time": "Todo el día", "title": "Caminatas, barrios y comida" }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "23 Marzo",
+      "city": "Lisboa",
+      "title": "Madrid → Lisboa",
+      "items": [
+        { "time": "Mañana", "title": "Traslado Madrid - Lisboa" },
+        { "time": "Tarde", "title": "Primer paseo por Lisboa" }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "24 Marzo",
+      "city": "Lisboa",
+      "title": "Lisboa",
+      "items": [
+        { "time": "Todo el día", "title": "Lisboa histórico y miradores" }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "25 Marzo",
+      "city": "Cascais",
+      "title": "Cascais",
+      "items": [
+        { "time": "Mañana", "title": "Tren Lisboa - Cascais" },
+        { "time": "Tarde", "title": "Playa y paseo por el centro" }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "26 Marzo",
+      "city": "Lisboa",
+      "title": "Lisboa",
+      "items": [
+        { "time": "Todo el día", "title": "Lisboa libre / pendientes" }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "27 Marzo",
+      "city": "Viaje",
+      "title": "Lisboa → Madrid → Bogotá → Medellín",
+      "items": [
+        { "time": "Mañana", "title": "Vuelo Lisboa - Madrid" },
+        { "time": "Tarde", "title": "Vuelo Madrid - Bogotá" },
+        { "time": "Noche", "title": "Bogotá - Medellín" }
       ]
     }
   ],
 
   "checklist": [
-    { "title": "Pasaporte" },
+    { "title": "Pasaporte / documento" },
+    { "title": "Tenis / medias" },
+    { "title": "Geles / electrolitos" },
     { "title": "Seguro de viaje" },
-    { "title": "Tarjetas / efectivo" }
+    { "title": "Tarjetas / efectivo" },
+    { "title": "Adaptador / cargadores" },
+    { "title": "Reservas descargadas (PDF)" }
   ]
 }
